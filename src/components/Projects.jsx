@@ -2,10 +2,10 @@ import { Box, Image, Link, Text, SimpleGrid, Heading } from "@chakra-ui/react";
 
 const projects = [
   {
-    title: "Project One",
-    description: "A description of project one.",
-    imageUrl: "path/to/project-one-image.png",
-    link: "https://link-to-project-one.com"
+    title: "mutuals",
+    description: "Web-based application that simplifies the process of finding and connecting with individuals who share a common interest in playing sports during the weekend.",
+    imageUrl: "images/mutuals logo.svg",
+    link: "https://github.com/AarushBedi/project-apollo"
   },
   {
     title: "Project Two",
