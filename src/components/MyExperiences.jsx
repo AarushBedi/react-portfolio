@@ -178,18 +178,18 @@ const MyExperiences = () => {
     <Box borderRadius={"lg"} w={"75%"} p={'6'} mx={'auto'} mt={8}> 
         <Heading as="h1" align={'center'} jusify='center' size='xl' mb={4} className="pulse-gradient">My Experience</Heading>
         <Divider mb={4} align='center' justify='center' maxW={'25%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
-        <Tabs size='lg' isFitted variant='soft-rounded' colorScheme='blue' align="center">
+        <Tabs size='lg' isFitted variant='soft-rounded' colorScheme='blue' align="center" defaultIndex={1}>
             <TabList>
-                <Tab sx={{ mx: 1, _hover: { transform: 'scale(0.9)' } }}>Current</Tab>
                 <Tab sx={{ mx: 1, _hover: { transform: 'scale(0.9)' } }}>Previous</Tab>
+                <Tab sx={{ mx: 1, _hover: { transform: 'scale(0.9)' } }} >Current</Tab>
                 <Tab sx={{ mx: 1, _hover: { transform: 'scale(0.9)' } }}>Emory</Tab>
             </TabList>
             <TabPanels>
                 <TabPanel>
-                    <CurrentPanel/>
+                    <PreviousPanel/>
                 </TabPanel>
                 <TabPanel>
-                    <PreviousPanel/>
+                    <CurrentPanel/>
                 </TabPanel>
                 <TabPanel>
                     <EmoryPanel/>

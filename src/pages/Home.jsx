@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import MyExperiences from "../components/MyExperiences";
 import SocialMedia from "../components/SocialMedia";
 import ProjectsPanel from "../components/Projects";
+import ImageFlipper from "../components/ImageFlipper";
 
 function Home() {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -50,15 +51,17 @@ function Home() {
                     <SocialMedia/>
                 </Box>
                 <Box flex="1" display="flex" justifyContent="center" p={4}>
-                    <Image src='images/aarush.png' alt='Aarush' borderRadius='full' boxSize={["150px","250px","350px"]} m={['2', '4', '6']} borderColor='black' borderWidth='2px' boxShadow="dark-lg" />
+                    <ImageFlipper/>
                 </Box>
             </Flex>
-            <Divider width='75%' borderColor="gray.250" borderWidth="2px" align='center' opacity={'100%'} my={8}></Divider>
         </Flex>
-        <Box  bg="gray.50" borderRadius="lg" p={6} w="75%" mx="auto" my={4} boxShadow="md">
+        <Box w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-2} transform={"skewY(-3deg)"}>
+        <Box  bg="gray.50" borderRadius="lg" p={6}  w="75%" mx="auto" my={12} boxShadow="md" transform={"skewY(3deg)"}>
             <Heading as="h1" align={'center'} jusify={'center'} size="xl" mb={4} className="pulse-gradient">
                 About Me
             </Heading>
+            <Divider mb={4} align='center' justify='center' maxW={'25%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
+
             <Text fontSize="md" textAlign={'center'}>
                 I'm a rising senior at Emory University majoring in Computer Science with a minor in Quantitative Social Sciences (Data Science). Since discovering my passion for programming in the 8th grade, I've become proficient in languages such as Java and Python, and have continuously expanded my expertise through both formal education and self-directed learning. <br/>
 
@@ -66,6 +69,7 @@ function Home() {
 
                 <br/>As a Student Intern at NXP Semiconductors, I am actively engaged in developing tools for embedded RISC-V debuggers and compilers. Our team's goal is to seamlessly integrate new features into existing software, ensuring robust and innovative solutions in the embedded systems landscape.<br/>          
             </Text>
+         </Box>
          </Box>
          <MyExperiences/>
          <ProjectsPanel/>

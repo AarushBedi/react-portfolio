@@ -1,39 +1,51 @@
-import { Box, Image, Link, Text, SimpleGrid, Heading } from "@chakra-ui/react";
+import { Box, Image, Link, Text, SimpleGrid, Heading, Divider, Badge} from "@chakra-ui/react";
 
 const projects = [
   {
-    title: "mutuals",
-    description: "Web-based application that simplifies the process of finding and connecting with individuals who share a common interest in playing sports during the weekend.",
+    title: "Mutuals",
+    description: "Web app that simplifies the process of finding & connecting with individuals with a common interest in activities.",
     imageUrl: "images/mutuals logo.svg",
-    link: "https://github.com/AarushBedi/project-apollo"
+    link: "https://github.com/AarushBedi/project-apollo",
+    tags: ["Javascript","React","Firebase"]
   },
   {
-    title: "Project Two",
-    description: "A description of project two.",
-    imageUrl: "path/to/project-two-image.png",
-    link: "https://link-to-project-two.com"
+    title: "Fraud Detection",
+    description: "An ablation study into understanding if personal information is required when it comes to credit card fraud detection.",
+    imageUrl: "images/fraud_icon.webp",
+    link: "https://link-to-project-two.com",
+    tags: ["Javascript","React","Firebase"]
   },
   {
-    title: "Project Three",
+    title: "Personal Portfolio",
     description: "A description of project three.",
-    imageUrl: "path/to/project-three-image.png",
-    link: "https://link-to-project-three.com"
+    imageUrl: "images/aarush_icon.svg",
+    link: "https://link-to-project-three.com",
+    tags: ["Javascript","React","Firebase"]
   },
   {
     title: "Project Four",
     description: "A description of project four.",
     imageUrl: "path/to/project-four-image.png",
-    link: "https://link-to-project-four.com"
+    link: "https://link-to-project-four.com",
+    tags: ["Javascript","React","Firebase"]
   }
 ];
 
+const CustomBadge = (BadgeList) => {
+    list = length(BadgeList)
+
+    return(
+        <></>
+    );
+};
+
 const ProjectsPanel = () => {
   return (
-    <Box p={4} w="100%">
-      <Heading as="h2" size="xl" textAlign="center" mb={8}>
-        My Projects
-      </Heading>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={10}>
+    <>
+    <Heading as="h1" align={'center'} jusify='center' size='xl' mb={4} className="pulse-gradient">My Projects</Heading>
+    <Divider mb={4} align='center' justify='center' maxW={'15%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
+    <Box p={4} w="100%" align='center' justify='center'>
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10} align={'center'} justify={'center'} w="75%">
         {projects.map((project, index) => (
           <Box
             key={index}
@@ -57,16 +69,19 @@ const ProjectsPanel = () => {
                 w="100%"
                 h="200px"
                 objectFit="cover"
+                boxShadow='sm'
               />
               <Heading as="h3" size="lg" mb={2}>
                 {project.title}
               </Heading>
               <Text>{project.description}</Text>
             </Link>
+            <Badge>{project.tags[1]}</Badge>
           </Box>
         ))}
       </SimpleGrid>
     </Box>
+    </>
   );
 };
 
