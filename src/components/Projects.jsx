@@ -42,44 +42,48 @@ const CustomBadge = (BadgeList) => {
 const ProjectsPanel = () => {
   return (
     <>
-    <Heading as="h1" align={'center'} jusify='center' size='xl' mb={4} className="pulse-gradient">My Projects</Heading>
-    <Divider mb={4} align='center' justify='center' maxW={'15%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
-    <Box p={4} w="100%" align='center' justify='center'>
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10} align={'center'} justify={'center'} w="75%">
-        {projects.map((project, index) => (
-          <Box
-            key={index}
-            p={5}
-            shadow="md"
-            borderWidth="1px"
-            borderRadius="lg"
-            overflow="hidden"
-            _hover={{
-              transform: "scale(1.05)",
-              boxShadow: "lg",
-              transition: "all 0.3s ease-in-out"
-            }}
-          >
-            <Link href={project.link} isExternal>
-              <Image
-                src={project.imageUrl}
-                alt={project.title}
-                borderRadius="md"
-                mb={4}
-                w="100%"
-                h="200px"
-                objectFit="cover"
-                boxShadow='sm'
-              />
-              <Heading as="h3" size="lg" mb={2}>
-                {project.title}
-              </Heading>
-              <Text>{project.description}</Text>
-            </Link>
-            <Badge>{project.tags[1]}</Badge>
-          </Box>
-        ))}
-      </SimpleGrid>
+    <Box w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-5} transform={"skewY(3deg)"}>
+        <Box w='100%' align="center" justify='center' mt={-5}>
+            <Box p={4} w="75%" align='center' justify='center' borderRadius={'lg'} transform={"skewY(-3deg)"} bg={'white'} mx="auto" my={20}>
+            <Heading as="h1" align={'center'} jusify='center' size='xl' mb={4} className="pulse-gradient">My Projects</Heading>
+            <Divider mb={4} align='center' justify='center' maxW={'15%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
+            <SimpleGrid h={'750px'} columns={{ base: 1, md: 2, lg: 2 }} spacing={10} align={'center'} justify={'center'} w="85%" bg={'white'}>
+                {projects.map((project, index) => (
+                <Box
+                    key={index}
+                    p={5}
+                    shadow="md"
+                    borderWidth="1px"
+                    borderRadius="lg"
+                    overflow="hidden"
+                    _hover={{
+                    transform: "scale(1.05)",
+                    boxShadow: "lg",
+                    transition: "all 0.3s ease-in-out"
+                    }}
+                >
+                    <Link href={project.link} isExternal>
+                    <Image
+                        src={project.imageUrl}
+                        alt={project.title}
+                        borderRadius="md"
+                        mb={4}
+                        w="100%"
+                        h="200px"
+                        objectFit="cover"
+                        boxShadow='sm'
+                    />
+                    <Heading as="h3" size="lg" mb={2}>
+                        {project.title}
+                    </Heading>
+                    <Text>{project.description}</Text>
+                    </Link>
+                    <Badge>{project.tags[1]}</Badge>
+                </Box>
+                ))}
+            </SimpleGrid>
+            </Box>
+        </Box>
     </Box>
     </>
   );

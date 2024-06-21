@@ -1,36 +1,11 @@
-import { Box, Heading, Text, Link, Image, Tabs, TabList, TabPanels, Tab, TabPanel, Divider, SimpleGrid} from "@chakra-ui/react";
+import { Box, Heading, Text, Link, Image, Tabs, TabList, TabPanels, Tab, TabPanel, Divider, SimpleGrid, Stack} from "@chakra-ui/react";
 import '../index.css'
 
 const CurrentPanel = () => {
     return (
         <>
-        <Box display="inline-block" p={2} w={'100%'}>
-        <Link href="https://www.nxp.com/"> 
-            <Image src="images/nxp_logo.svg"
-            my={4}
-            width="350px"
-            boxShadow="small"
-            borderRadius="lg"
-            p={4}
-            _hover={{
-            transform: "scale(1.05)",
-            shadow: 'md',
-            transition: "all 0.5s ease"
-            }}/>
-        </Link>
-        <Text> 
-        Embedded SWE Intern <br/>
-        Working on RISC-V and ARM Processors
-        </Text>
-    </Box>
-        </>
-    );
-};
-
-const PreviousPanel = () => {
-    return (
-        <>
-        <Box display="inline-block" p={2} w={'100%'}>
+        <Box h={'350px'}>
+            <Box display="inline-block" p={2} w={'100%'}>
             <Link href="https://www.nxp.com/"> 
                 <Image src="images/nxp_logo.svg"
                 my={4}
@@ -45,27 +20,23 @@ const PreviousPanel = () => {
                 }}/>
             </Link>
             <Text> 
-            SWE Intern @ NXP<br/>
+            Embedded SWE Intern <br/>
+            Working on RISC-V and ARM Processors
             </Text>
-            <Link href="https://www.efi.com/">
-            <Image src="images/efi.gif"
+            </Box>
+        </Box>
+        </>
+    );
+};
+
+const PreviousPanel = () => {
+    return (
+        <>
+        <Box h={'350px'}>
+        <Stack direction={['column','column','row']} p={2} w={'100%'} align='center' justify='center'>
+            <Link href="https://www.nxp.com/" mx={15}> 
+                <Image src="images/nxp_logo.svg"
                 my={4}
-                width="350px"
-                boxShadow="small"
-                borderRadius="lg"
-                p={4}
-                _hover={{
-                transform: "scale(1.05)",
-                shadow: 'md',
-                transition: "all 0.5s ease"
-                }}/>
-            </Link>
-            <Text>
-                SWE Intern @ EFI
-            </Text>
-            <Link href="https://www.pathfndr.io/">
-            <Image src="images/pathfndr_logo.png"
-                my={10}
                 width="400px"
                 boxShadow="small"
                 borderRadius="lg"
@@ -76,9 +47,39 @@ const PreviousPanel = () => {
                 transition: "all 0.5s ease"
                 }}/>
             </Link>
-            <Text>
-                Data Science Intern @ Pathfndr
-            </Text>
+            <Link href="https://www.efi.com/" mx={15}>
+            <Image src="images/EFI logo.png"
+                my={4}
+                width="300px"
+                boxShadow="small"
+                borderRadius="lg"
+                p={4}
+                _hover={{
+                transform: "scale(1.05)",
+                shadow: 'md',
+                transition: "all 0.5s ease"
+                }}/>
+            </Link>
+            <Link href="https://www.pathfndr.io/" mx={15}>
+            <Image src="images/pathfndr_logo.png"
+                my={10}
+                width="500px"
+                boxShadow="small"
+                borderRadius="lg"
+                p={4}
+                _hover={{
+                transform: "scale(1.05)",
+                shadow: 'md',
+                transition: "all 0.5s ease"
+                }}/>
+            </Link>
+        </Stack>
+        <Text> 
+        - Worked as a Software Developement Intern for NXP Semiconductors (May - July, 2023), working with the Internal Tools department. <br/>
+        - Worked as a Data Science Intern for Pathfndr.io (June - July, 2022), a Bangalore based startup <br/>
+        - Worked as a Software Developement Intern for EFI (May - June, 2020), working with the development teams. <br/>
+        
+        </Text>
         </Box>
         </>
     );
@@ -86,8 +87,8 @@ const PreviousPanel = () => {
 
 const EmoryPanel = () => {
     return(
-        <Box p={4} w="100%">
-            <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10}>
+        <Box p={4} w="100%" h={'350px'}>
+            <SimpleGrid columns={{ base: 4, md: 4, lg: 4 }} spacing={10}>
                 <Box alignContent="center" justify='center'>
                     <Link href="https://www.biokind.org/"> 
                         <Image
@@ -106,6 +107,7 @@ const EmoryPanel = () => {
                     </Link>
                     <Text> 
                         Data Analyst<br/>
+                        April 2023 - Present
                     </Text>
                 </Box>
                 <Box alignContent="center">
@@ -125,7 +127,8 @@ const EmoryPanel = () => {
                         />
                     </Link>
                     <Text>
-                        Quantitative Trader
+                        Quantitative Trader <br/>
+                        Jan 2022 - July 2023
                     </Text>
                 </Box>
                 <Box alignContent="center">
@@ -145,7 +148,8 @@ const EmoryPanel = () => {
                         />
                     </Link>
                     <Text>
-                        Crypto/Web3 Team member
+                        Crypto/Web3 Team member <br/>
+                        April 2022 - Present
                     </Text>
                 </Box>
                 <Box alignContent="center">
@@ -165,7 +169,8 @@ const EmoryPanel = () => {
                         />
                     </Link>
                     <Text>
-                        Facilities Attendant
+                        Facilities Attendant <br/>
+                        Dec 2021 - Feb 2022
                     </Text>
                 </Box>
             </SimpleGrid>

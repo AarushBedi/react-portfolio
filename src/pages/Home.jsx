@@ -55,8 +55,8 @@ function Home() {
                 </Box>
             </Flex>
         </Flex>
-        <Box w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-2} transform={"skewY(-3deg)"}>
-        <Box  bg="gray.50" borderRadius="lg" p={6}  w="75%" mx="auto" my={12} boxShadow="md" transform={"skewY(3deg)"}>
+        <Box w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-5} transform={"skewY(-3deg)"}>
+        <Box  bg="gray.50" borderRadius="lg" p={6}  w="75%" mx="auto" my={20} boxShadow="md" transform={"skewY(3deg)"}>
             <Heading as="h1" align={'center'} jusify={'center'} size="xl" mb={4} className="pulse-gradient">
                 About Me
             </Heading>
@@ -72,7 +72,7 @@ function Home() {
          </Box>
          </Box>
          <MyExperiences/>
-         <ProjectsPanel/>
+            <ProjectsPanel/>
          </Box>
         </>
     );
