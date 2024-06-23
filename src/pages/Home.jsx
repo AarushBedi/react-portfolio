@@ -44,17 +44,16 @@ function Home() {
         </Flex>
         <Box id="about" w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-5} transform={"skewY(-3deg)"}>
         <Box  bg="gray.50" borderRadius="lg" p={6}  w="75%" mx="auto" my={20} boxShadow="md" transform={"skewY(3deg)"}>
-            <Heading as="h1" align={'center'} jusify={'center'} size="xl" mb={4} className="pulse-gradient">
+            <Heading as="h1" align={'center'} jusify={'center'} size="xl" mb={4} className="pulse-gradient ibm-plex-sans">
                 About Me
             </Heading>
             <Divider mb={4} align='center' justify='center' maxW={'25%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
-
-            <Text fontSize="md" textAlign={'center'}>
+            <Text fontSize="md" textAlign={'center'} className="ibm-plex-sans-medium-semibold">
                 I'm a rising senior at Emory University majoring in Computer Science with a minor in Quantitative Social Sciences (Data Science). Since discovering my passion for programming in the 8th grade, I've become proficient in languages such as Java and Python, and have continuously expanded my expertise through both formal education and self-directed learning. <br/>
 
                 <br/>Throughout my academic journey—from high school to Emory University—I have vigorously engaged with an array of subjects, including artificial intelligence, machine learning, and web-app design. My academic pursuits are complemented by a strong interest in data science, where I thrive on extracting actionable insights from complex datasets to empower better decision-making within organizations.<br/>
 
-                <br/>As a Student Intern at NXP Semiconductors, I am actively engaged in developing tools for embedded RISC-V debuggers and compilers. Our team's goal is to seamlessly integrate new features into existing software, ensuring robust and innovative solutions in the embedded systems landscape.<br/>          
+                <br/>Away from academics, I have interests in soccer, movies, gymming, gaming and a lot more. I have been playing soccer for over 10 years and love playing pick up games wherever I go (I am also a diehard FC Barcelona fan!). My favorite movie of all time is Forrest Gump and I am pretty active on Letterboxd. I love finding new cafes to try their Vanilla Ice Lattes and have been ranking each one I have had. <br/>          
             </Text>
          </Box>
          </Box>
