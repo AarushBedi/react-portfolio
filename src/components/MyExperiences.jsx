@@ -19,9 +19,10 @@ const CurrentPanel = () => {
                 transition: "all 0.5s ease"
                 }}/>
             </Link>
+            <Text fontWeight={"bold"}> Embedded SWE Intern</Text>
             <Text> 
-            Embedded SWE Intern <br/>
-            Working on RISC-V and ARM Processors
+            May 2024 - Present <br/>
+            Working on embedded compilers and debuggers such as OpenOCD and PyOCD with an emphasis on RISC-V and ARM processors. Main aim of the project is to try and make PyOCD compatible with RISC-V processors.
             </Text>
             </Box>
         </Box>
@@ -75,9 +76,7 @@ const PreviousPanel = () => {
             </Link>
         </Stack>
         <Text> 
-        - Worked as a Software Developement Intern for NXP Semiconductors (May - July, 2023), working with the Internal Tools department. <br/>
-        - Worked as a Data Science Intern for Pathfndr.io (June - July, 2022), a Bangalore based startup <br/>
-        - Worked as a Software Developement Intern for EFI (May - June, 2020), working with the development teams. <br/>
+            Previously worked at NXP Semiconductors (May 2023 - July 2023) as a Software Development Intern where I collaborated with the Tools Devlopment Team. Furthermore, worked at EFI (May 2020 - June 2020) as a Software Development Intern and a Bangalore-based start up Pathfndr.io (June 2022 - July 2022) as a Data Science Intern.
         
         </Text>
         </Box>
@@ -105,8 +104,8 @@ const EmoryPanel = () => {
                             }}
                         />
                     </Link>
+                    <Text fontWeight={'bold'}> Data Analyst</Text>
                     <Text> 
-                        Data Analyst<br/>
                         April 2023 - Present
                     </Text>
                 </Box>
@@ -126,8 +125,8 @@ const EmoryPanel = () => {
                             }}
                         />
                     </Link>
+                    <Text fontWeight={'bold'}> Quantitative Trader</Text>
                     <Text>
-                        Quantitative Trader <br/>
                         Jan 2022 - July 2023
                     </Text>
                 </Box>
@@ -147,8 +146,8 @@ const EmoryPanel = () => {
                             }}
                         />
                     </Link>
+                    <Text fontWeight={'bold'}> Team Member</Text>
                     <Text>
-                        Crypto/Web3 Team member <br/>
                         April 2022 - Present
                     </Text>
                 </Box>
@@ -168,8 +167,8 @@ const EmoryPanel = () => {
                             }}
                         />
                     </Link>
+                    <Text fontWeight={'bold'}> Facilities Attendant</Text>
                     <Text>
-                        Facilities Attendant <br/>
                         Dec 2021 - Feb 2022
                     </Text>
                 </Box>

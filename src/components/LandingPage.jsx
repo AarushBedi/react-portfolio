@@ -1,6 +1,6 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-import ScrollArrow from "../components/ScrollArrow";
-import TypingAnimation from "../components/TypingAnimation";
+import ScrollArrow from "./ScrollArrow";
+import TypingAnimation from "./TypingAnimation";
 
 const LandingPage = () => {
   return (

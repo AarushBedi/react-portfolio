@@ -1,33 +1,20 @@
-import {useEffect, useState} from "react";
 import {Flex, Heading, Text, Box, Image, Divider, Link,} from "@chakra-ui/react"
-import {FaTwitter, FaInstagram, FaGithub, FaLinkedin} from 'react-icons/fa'
 import '../index.css'
 import Navbar from "../components/Navbar";
 import MyExperiences from "../components/MyExperiences";
 import SocialMedia from "../components/SocialMedia";
 import ProjectsPanel from "../components/Projects";
 import ImageFlipper from "../components/ImageFlipper";
+import LandingPage from "../components/LandingPage";
 
 function Home() {
-    const [scrollPosition, setScrollPosition] = useState(0);
-
-    const handleScroll = () => {
-        const position = window.pageYOffset;
-        setScrollPosition(position);
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
 
     return(
         <>
+        <Navbar/>
+        <LandingPage/>
         <Box pt={"80vh"}> 
-        <Navbar />
-        <Flex direction="column" align="center" justify="center" minH="100vh" w="100vw" p={4} className="background-text" mt={-50}>
+        <Flex id = "home" direction="column" align="center" justify="center" minH="100vh" w="100vw" p={4} className="background-text" mt={-50}>
             <Flex direction={["column", "column", "row"]} align="center" justify="center" maxW="1200px" w="100%" p={10} mt={150}>
                 <Box flex="1" textAlign={['center', 'center', 'left']} p={4}>
                     <Flex direction={"row"}>
@@ -55,7 +42,7 @@ function Home() {
                 </Box>
             </Flex>
         </Flex>
-        <Box w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-5} transform={"skewY(-3deg)"}>
+        <Box id="about" w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-5} transform={"skewY(-3deg)"}>
         <Box  bg="gray.50" borderRadius="lg" p={6}  w="75%" mx="auto" my={20} boxShadow="md" transform={"skewY(3deg)"}>
             <Heading as="h1" align={'center'} jusify={'center'} size="xl" mb={4} className="pulse-gradient">
                 About Me
@@ -71,8 +58,8 @@ function Home() {
             </Text>
          </Box>
          </Box>
-         <MyExperiences/>
-            <ProjectsPanel/>
+         <Box id="experiences"> <MyExperiences/> </Box>
+         <Box id="projects"> <ProjectsPanel/> </Box>
          </Box>
         </>
     );

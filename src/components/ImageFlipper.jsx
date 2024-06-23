@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box, Image } from '@chakra-ui/react';
-import '../index.css'; // Ensure to import your CSS
+import '../index.css';
 
 const ImageFlipper = () => {
   const [flipped, setFlipped] = useState(false);

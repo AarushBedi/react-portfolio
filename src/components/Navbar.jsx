@@ -1,6 +1,5 @@
-import { Flex, Link, Box, useColorMode } from "@chakra-ui/react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from "../pages/Home";
+import { Flex, Box, useColorMode } from "@chakra-ui/react";
+import { Link as ScrollLink } from "react-scroll";
 
 
 const Navbar = () => {
@@ -8,18 +7,18 @@ const Navbar = () => {
   return (
     <Box position="fixed" top="20px" left="50%" transform="translateX(-50%)" bg="white" boxShadow="md" borderRadius="full" px={6} py={3} zIndex={1000}>
       <Flex alignItems="center" justifyContent="center" gap={6}>
-        <Link href="/pages/Home.jsx" fontWeight="bold" color="teal.500">
+      <ScrollLink to="home" smooth={true} duration={500} offset={-70} style={{ cursor: 'pointer', fontWeight: 'bold', color: 'teal.500' }}>
           Home
-        </Link>
-        <Link href="/about" fontWeight="bold">
+        </ScrollLink>
+        <ScrollLink to="about" smooth={true} duration={500} offset={-70} style={{ cursor: 'pointer', fontWeight: 'bold' }}>
           About
-        </Link>
-        <Link href="/projects" fontWeight="bold">
+        </ScrollLink>
+        <ScrollLink to="experiences" smooth={true} duration={500} offset={-70} style={{ cursor: 'pointer', fontWeight: 'bold' }}>
+          Experience
+        </ScrollLink>
+        <ScrollLink to="projects" smooth={true} duration={500} offset={-70} style={{ cursor: 'pointer', fontWeight: 'bold' }}>
           Projects
-        </Link>
-        <Link href="/articles" fontWeight="bold">
-          Articles
-        </Link>
+        </ScrollLink>
       </Flex>
     </Box>
   );

@@ -1,21 +1,22 @@
-// src/App.jsx
-import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { Route, Routes, Router } from 'react-router-dom';
 import Home from './pages/Home';
-import { Box, Flex } from '@chakra-ui/react';
-import LandingPage from './pages/LandingPage';
+import { Box } from '@chakra-ui/react';
+import Mutuals from './pages/MutualsPage';
+import MLProject from './pages/MLProjectPage';
+import PersonalPortfolio from './pages/PersonalPortfolioPage';
+import Biokind from './pages/BiokindPage';
 
 function App() {
-  const [showLandingPage, setShowLandingPage] = useState(true);
-
-  const handleScrollDown = () => {
-    setShowLandingPage(false);
-  };
-  
   return (
-    <Box position={'relative'}>
-        <LandingPage/>
-        <Home/>
+      <Box position={'relative'}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/mutuals" element={<Mutuals />} />
+          <Route path="/ML" element={<MLProject />}/>
+          <Route path="/portfolio" element={<PersonalPortfolio />} />
+          <Route path='/biokind' element={<Biokind />} />
+        </Routes>
       </Box>
   );
 }
