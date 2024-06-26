@@ -6,6 +6,56 @@ import SocialMedia from "../components/SocialMedia";
 import ProjectsPanel from "../components/Projects";
 import ImageFlipper from "../components/ImageFlipper";
 import LandingPage from "../components/LandingPage";
+import CarouselComponent from "../components/ImageCarousel";
+
+const carouselItems = [
+    {
+      type: 'image',
+      src: 'images/footy.jpg',
+      description: 'Playing Intramural soccer - ended up losing in the finals 🥲',
+    },
+    {
+      type: 'image',
+      src: 'images/ny.jpg',
+      description: 'My best friend and I in Times Square!',
+    },
+    {
+      type: 'image',
+      src: 'images/coffee.jpg',
+      description: 'A sunday tradition in Austin - Coffee & Coding!',
+    },
+    {
+        type: 'image',
+        src: 'images/cabo.jpg',
+        description: 'A picture I took at 6 a.m from my hotel room in Mexico.',
+    },
+    {
+        type: 'image',
+        src: 'images/chows.jpg',
+        description: 'The best asian in Atlanta - Ruby Chows',
+    },
+    {
+        type: 'image',
+        src: 'images/georiga.jpg',
+        description: 'A picture from when I snuck into Sanford Stadium.',
+    },
+    {
+        type: 'image',
+        src: 'images/savannah.jpg',
+        description: 'A core memory - seeing the park "Forrest Gump" was filmed.',
+    },
+    {
+        type: 'image',
+        src: 'images/jodhpure.jpg',
+        description: 'A moment from a family vacation in the city of Blue - Jodhpur.',
+    },
+    {
+        type: 'image',
+        src: 'images/ponce.jpg',
+        description: 'My absolute favorite place in Atlanta - Ponce City Market.',
+    },
+  ];
+  
 
 function Home() {
 
@@ -13,7 +63,7 @@ function Home() {
         <>
         <Navbar/>
         <LandingPage/>
-        <Box pt={"80vh"}> 
+        <Box pt={"80vh"} mb={100}> 
         <Flex id = "home" direction="column" align="center" justify="center" minH="100vh" w="100vw" p={4} className="background-text" mt={-50}>
             <Flex direction={["column", "column", "row"]} align="center" justify="center" maxW="1200px" w="100%" p={10} mt={150}>
                 <Box flex="1" textAlign={['center', 'center', 'left']} p={4}>
@@ -33,7 +83,7 @@ function Home() {
                     </Box>
                     <Text fontSize="xl" alignSelf={'baseline'} className=" ibm-plex-sans-bold">
                         Computer Science + Data Science @ <Link href="https://www.emory.edu/home/index.html" color="teal.500" isExternal textDecoration="underline">Emory</Link>.<br/>
-                        Interested in AI, ML and all things technology. <br/>                    
+                        Interested in AI, ML and all things technology. <br/>                   
                     </Text>
                     <SocialMedia/>
                 </Box>
@@ -59,6 +109,14 @@ function Home() {
          </Box>
          <Box id="experiences"> <MyExperiences/> </Box>
          <Box id="projects"> <ProjectsPanel/> </Box>
+         <Box id="images" mt={10}>
+            <Heading as="h1" align={'center'} jusify={'center'} size="xl" mb={4} className="pulse-gradient ibm-plex-sans">
+                Pictures
+            </Heading>
+            <Divider mb={4} align='center' justify='center' maxW={'10%'} mx="auto" borderWidth={'2px'}borderColor={'teal.500'}></Divider>
+            <Text align={'center'} justify={'center'} fontWeight={'bold'} fontSize={'20px'} mb={5}> Some pictures of my life that I love to share!</Text>
+            <CarouselComponent items={carouselItems} />
+        </Box>
          </Box>
         </>
     );

@@ -9,12 +9,12 @@ const tags = ["Javascript","React","Firebase"]
 const images = [
   {
     type: 'image',
-    src: 'images/mutuals_team.jpeg',
+    src: 'images/mutuals_team.jpg',
     description: 'The team behind Mutuals!'
   },
   {
     type: 'image',
-    src: 'images/mutuals_sprint.jpeg',
+    src: 'images/mutuals_sprint.jpg',
     description: 'Presenting the Proposal'
   }
 ]

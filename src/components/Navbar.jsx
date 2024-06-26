@@ -19,6 +19,9 @@ const Navbar = () => {
         <ScrollLink to="projects" smooth={true} duration={500} offset={-70} style={{ cursor: 'pointer', fontWeight: 'bold' }}>
           Projects
         </ScrollLink>
+        <ScrollLink to="images" smooth={true} duration={500} offset={-70} style={{ cursor: 'pointer', fontWeight: 'bold' }}>
+          Pictures
+        </ScrollLink>
       </Flex>
     </Box>
   );

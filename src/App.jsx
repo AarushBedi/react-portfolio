@@ -6,9 +6,12 @@ import Mutuals from './pages/MutualsPage';
 import MLProject from './pages/MLProjectPage';
 import PersonalPortfolio from './pages/PersonalPortfolioPage';
 import Biokind from './pages/BiokindPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
+    <>
+    <ScrollToTop />
       <Box position={'relative'}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -18,6 +21,7 @@ function App() {
           <Route path='/biokind' element={<Biokind />} />
         </Routes>
       </Box>
+      </>
   );
 }
 

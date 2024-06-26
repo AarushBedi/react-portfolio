@@ -9,6 +9,7 @@ const ReturnButton = () => {
     const handleReturn = () => {
         navigate('/#projects');
     };
+    
     return (
         <> 
          <Button onClick={handleReturn} leftIcon={<ArrowBackIcon/>} color={'grey.500'} size={'md'} variant={'solid'} height={'35px'} width={'150px'}>Return home</Button>
