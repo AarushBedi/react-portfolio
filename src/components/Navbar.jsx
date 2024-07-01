@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <Box
       position="fixed"
-      top="20px"
+      top={["30px",,"20px"]}
       left={["50%","30%","50%"]}
       transform="translateX(-50%)"
       bg="white"
