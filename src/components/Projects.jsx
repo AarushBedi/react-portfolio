@@ -38,8 +38,8 @@ const ProjectsPanel = () => {
     <Box w='100%' bg='blue.100' display="flex" justifyContent="center" mt={-5} transform={"skewY(3deg)"}>
       <Box w='100%' align="center" justify='center' mt={-5}>
         <Box p={4} w={["90%", "85%", "75%"]} align='center' justify='center' borderRadius={'lg'} transform={"skewY(-3deg)"} bg={'white'} mx="auto" my={20}>
-          <Heading as="h1" align={'center'} justify='center' size='xl' mb={4} className="pulse-gradient">My Projects</Heading>
-          <Divider mb={4} align='center' justify='center' maxW={'15%'} mx="auto" borderWidth={'2px'} borderColor={'teal.500'}></Divider>
+          <Heading as="h1" align={'center'} justify='center' size={['lg', 'xl', '2xl']} mb={4} className="pulse-gradient">My Projects</Heading>
+          <Divider mb={4} align='center' justify='center' maxW={['50%', '35%', '25%']} mx="auto" borderWidth={'2px'} borderColor={'teal.500'}></Divider>
           <SimpleGrid columns={{ base: 1, md: 2, lg: 2 }} spacing={10} align={'center'} justify={'center'} w="100%">
             {projects.map((project, index) => (
               <Box
@@ -70,10 +70,10 @@ const ProjectsPanel = () => {
                     objectFit="cover"
                     boxShadow='sm'
                   />
-                  <Heading as="h3" size="lg" mb={2}>
+                  <Heading as="h3" size={["md", "lg", "lg"]} mb={2}>
                     {project.title}
                   </Heading>
-                  <Text mb={2}>{project.description}</Text>
+                  <Text mb={2} fontSize={["sm", "md", "md"]}>{project.description}</Text>
                 </Link>
                 <CustomBadge tags={project.tags} />
               </Box>

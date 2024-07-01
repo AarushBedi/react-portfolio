@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import { Box } from "@chakra-ui/react";
 
 const TypingAnimation = () => {
   const el = useRef(null);
@@ -18,9 +19,9 @@ const TypingAnimation = () => {
   }, []);
 
   return (
-    <div style={{ fontSize: '5rem', color: 'white', textAlign: 'center' }}>
+    <Box fontSize={['4rem', '4rem', '5rem']} color="white" textAlign="center">
       <span ref={el} />
-    </div>
+    </Box>
   );
 };
 

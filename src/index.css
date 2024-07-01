@@ -265,3 +265,7 @@ button:focus-visible {
 .back {
   transform: rotateY(180deg);
 }
+
+html, body {
+  overflow-x: hidden;
+}

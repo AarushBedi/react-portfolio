@@ -6,7 +6,7 @@ import '../index.css'
 const SocialMedia = () => {
     return (
         <Flex direction={'row'} mt={2} align={'center'} justify={'left'}> 
-        <Link href="https://www.linkedin.com/in/aarushbedi/" mr={4}><FaLinkedin size={'25px'}/></Link>
+        <Link href="https://www.linkedin.com/in/aarushbedi/" mr={4} ml={[4,0,0]}><FaLinkedin size={'25px'}/></Link>
         <Link href="https://github.com/AarushBedi" mx={4}><FaGithub size={'25px'}/></Link>
         <Link href="https://x.com/AarushBedi1" mx={4}><FaTwitter size={'25px'}/></Link>
         <Link href="mailto:aarush.bedi@emory.edu" mx={4}><EmailIcon boxSize={'25px'} /></Link>

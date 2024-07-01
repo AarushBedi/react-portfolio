@@ -7,7 +7,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <Box bg={bgColor} color={textColor} py={4} px={8} mt={10}>
+    <Box bg={bgColor} w={['62%','100%','100%']} color={textColor} py={4} px={8} mt={10}>
       <Flex direction={['column', 'row']} justify="space-between" align="center">
         <Text fontSize="sm" textAlign={['center', 'left']}>
           &copy; {currentYear} Aarush. All rights reserved.
