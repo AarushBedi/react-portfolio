@@ -14,9 +14,9 @@ const Navbar = () => {
       px={[4, 6, 8]}
       py={[2, 3, 4]}
       zIndex={1000}
-      width={['90%', '70%', '35%']} 
+      width={['95%', '70%', '35%']} 
     >
-      <Flex alignItems="center" justifyContent="center" gap={[1.5, 4, 6]}>
+      <Flex alignItems="center" justifyContent="center" gap={[2, 4, 6]}>
         <ScrollLink
           to="home"
           smooth={true}
@@ -26,7 +26,7 @@ const Navbar = () => {
             cursor: 'pointer',
             fontWeight: 'bold',
             color: 'teal.500',
-            fontSize: ['xs', 'md', 'lg'],  // Responsive font size
+            fontSize: ['xs', 'md', 'lg'],  
           }}
         >
           Home
@@ -39,7 +39,7 @@ const Navbar = () => {
           style={{
             cursor: 'pointer',
             fontWeight: 'bold',
-            fontSize: ['xs', 'md', 'lg'],
+            fontSize: ['xxs', 'sm', 'lg'],
           }}
         >
           About
